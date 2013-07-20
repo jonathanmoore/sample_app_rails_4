@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-	describe "Home page" do
+	let(:base_title) { "Ruby on Rails Tutorial Sample App" }
 
-		let(:base_title) { "Ruby on Rails Tutorial Sample App"}
+	describe "Home page" do
 		
 		it "should have the content 'Sample App'" do
 			visit '/static_pages/home'
@@ -52,7 +52,7 @@ describe "Static pages" do
 
 		it "should have the title 'Contact Us'" do
 			visit '/static_pages/contact'
-			expect(page).to have_title("#{base_title} | Contact Us")
+			expect(page).to have_title("#{base_title} | Contact")
 		end
 	end
 end
